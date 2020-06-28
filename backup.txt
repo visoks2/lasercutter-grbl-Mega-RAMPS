@@ -1,0 +1,43 @@
+GRBL settings that worked ^^
+$$
+$0=10
+$1=250
+$2=0
+$3=0
+$4=0
+$5=0
+$6=0
+$10=19
+$11=0.010
+$12=0.002
+$13=0
+$20=0
+$21=0
+$22=1
+$23=1
+$24=6000.000
+$25=12000.000
+$26=10
+$27=5.000
+$30=255
+$31=0
+$32=1
+$100=78.740
+$101=78.740
+$102=250.000
+$110=5000.000
+$111=5000.000
+$112=500.000
+$120=3000.000
+$121=3000.000
+$122=10.000
+$130=340.000
+$131=210.000
+$132=200.000
+
+Setting up laserweb:
+    Add to gcode [global] settings          M3 ; enable laser mode
+    Add to gcode [on job start] settings    32=1 ; enable laser
+    Set laser PWM values.... which are:
+        PWM_MAX_VALUE 772.0
+        PWM_MIN_VALUE 54
