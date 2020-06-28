@@ -75,7 +75,7 @@ void spindle_set_speed(uint16_t pwm_value)
   if (pwm_value == SPINDLE_PWM_OFF_VALUE) {
     spindle_stop();
   } else {
-    SPINDLE_OCR_REGISTER = pwm_value; // Set PWM output level.
+    SPINDLE_OCR_REGISTER = (SPINDLE_PWM_MAX_VALUE+SPINDLE_PWM_MIN_VALUE) - pwm_value; // Set PWM output level.
     SPINDLE_TCCRA_REGISTER |= (1<<SPINDLE_COMB_BIT); // Ensure PWM output is enabled.
 
     #ifdef INVERT_SPINDLE_ENABLE_PIN
